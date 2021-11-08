@@ -1,0 +1,49 @@
+unit Unit4;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, jpeg, ExtCtrls, ComCtrls;
+
+type
+  TForm4 = class(TForm)
+    ENicName: TEdit;
+    EPassword: TEdit;
+    EName: TEdit;
+    EFamily: TEdit;
+    EOtchestvo: TEdit;
+    FonRegistr: TImage;
+    LNicName: TLabel;
+    LPassword: TLabel;
+    LFamily: TLabel;
+    Label2: TLabel;
+    LOtchestvo: TLabel;
+    CBPol: TComboBox;
+    DTPBirthday: TDateTimePicker;
+    BClose: TButton;
+    BRegistr: TButton;
+    LBirthday: TLabel;
+    procedure BCloseClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form4: TForm4;
+
+implementation
+
+uses Unit3;
+
+{$R *.dfm}
+
+procedure TForm4.BCloseClick(Sender: TObject);
+begin
+   Form3.Show;
+   Form4.Close;
+end;
+
+end.
